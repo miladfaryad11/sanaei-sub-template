@@ -13,21 +13,25 @@ A lightweight bilingual subscription page template for Sanaei / 3x-ui / X-UI pan
 - Inline WebP logo with no local image dependency
 - Pure HTML, CSS and JavaScript
 
+## Quick Links
+
+- Project: https://github.com/miladfaryad11/sanaei-sub-template
+- Template: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html
+- Screenshot: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/preview.png
+
 ## Preview
 
 ![Subscription page preview](preview.png)
 
 ## Install
 
-Download the installer from the repository archive and run it:
+Install with one command:
 
 ```bash
-curl -fsSL https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
-  | tar -xzOf - --wildcards '*/install.sh' > /tmp/x-ui-sub-install.sh
-sudo bash /tmp/x-ui-sub-install.sh
+bash <(curl -fsSL https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/install.sh)
 ```
 
-The installer downloads the repository archive, extracts `sub.html`, and installs it at:
+The installer downloads `sub.html` and installs it at:
 
 ```text
 /etc/x-ui/sub/sub.html
@@ -55,9 +59,8 @@ Then save the settings and reopen a subscription link.
 
 ```bash
 sudo mkdir -p /etc/x-ui/sub
-curl -fsSL https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
-  | tar -xzOf - --wildcards '*/sub.html' \
-  | sudo tee /etc/x-ui/sub/sub.html >/dev/null
+sudo curl -fsSL -o /etc/x-ui/sub/sub.html \
+  https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html
 sudo chmod 644 /etc/x-ui/sub/sub.html
 ```
 
