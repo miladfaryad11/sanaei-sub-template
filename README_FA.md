@@ -2,6 +2,12 @@
 
 ![پیش‌نمایش صفحه اشتراک](preview.png)
 
+## لینک‌های کوتاه
+
+- پروژه: https://github.com/miladfaryad11/sanaei-sub-template
+- قالب: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html
+- اسکرین‌شات: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/preview.png
+
 این قالب در مسیر زیر نصب می‌شود:
 
 ```text
@@ -16,22 +22,19 @@
 https://github.com/miladfaryad11/sanaei-sub-template
 ```
 
-مخزن باید عمومی باشد تا سرور بتواند آرشیو GitHub را دانلود کند.
+مخزن عمومی است و فایل‌ها از لینک مستقیم GitHub قابل دریافت هستند.
 
 ## نصب خودکار
 
-برای دریافت و اجرای نصب‌کننده:
+نصب با یک دستور:
 
 ```bash
-curl -fsSL https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
-  | tar -xzOf - --wildcards '*/install.sh' > /tmp/x-ui-sub-install.sh
-sudo bash /tmp/x-ui-sub-install.sh
+bash <(curl -fsSL https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/install.sh)
 ```
 
 اسکریپت:
 
-- آرشیو قالب را از GitHub دانلود می‌کند.
-- فایل `sub.html` را از آرشیو استخراج می‌کند.
+- فایل `sub.html` را از GitHub دانلود می‌کند.
 - معتبر بودن HTML را بررسی می‌کند.
 - پوشه‌ی `/etc/x-ui/sub` را می‌سازد.
 - اگر نسخه‌ی قبلی وجود داشته باشد، از آن backup می‌گیرد.
@@ -84,7 +87,7 @@ head -n 5 /etc/x-ui/sub/sub.html
 مخزن باید عمومی باشد و فایل باید دقیقاً با نام `sub.html` در آرشیو شاخه‌ی `main` وجود داشته باشد. آدرس آرشیو را با دستور زیر بررسی کنید:
 
 ```bash
-curl -I "https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz"
+curl -I "https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html"
 ```
 
 ### خطای دسترسی
