@@ -13,7 +13,7 @@
 مخزن GitHub باید عمومی باشد و فایل `sub.html` در ریشه‌ی شاخه‌ی `main` قرار داشته باشد:
 
 ```text
-https://github.com/proxystore11/sanaei-sub-template
+https://github.com/miladfaryad11/sanaei-sub-template
 ```
 
 مخزن باید عمومی باشد تا سرور بتواند آرشیو GitHub را دانلود کند.
@@ -23,7 +23,7 @@ https://github.com/proxystore11/sanaei-sub-template
 برای دریافت و اجرای نصب‌کننده:
 
 ```bash
-curl -fsSL https://github.com/proxystore11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
+curl -fsSL https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
   | tar -xzOf - --wildcards '*/install.sh' > /tmp/x-ui-sub-install.sh
 sudo bash /tmp/x-ui-sub-install.sh
 ```
@@ -84,7 +84,7 @@ head -n 5 /etc/x-ui/sub/sub.html
 مخزن باید عمومی باشد و فایل باید دقیقاً با نام `sub.html` در آرشیو شاخه‌ی `main` وجود داشته باشد. آدرس آرشیو را با دستور زیر بررسی کنید:
 
 ```bash
-curl -I "https://github.com/proxystore11/sanaei-sub-template/archive/refs/heads/main.tar.gz"
+curl -I "https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz"
 ```
 
 ### خطای دسترسی
