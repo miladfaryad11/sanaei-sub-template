@@ -432,7 +432,7 @@
             <div class="ring-wrap">
               <svg class="usage-ring" id="trafficRing" viewBox="0 0 120 120" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-i18n-aria="usage">
                 <circle class="usage-ring-track" cx="60" cy="60" r="49"></circle>
-                <circle class="usage-ring-progress" id="progressRing" cx="60" cy="60" r="49" stroke-dasharray="307.876" stroke-dashoffset="307.876"></circle>
+                <circle class="usage-ring-progress" id="progressRing" cx="60" cy="60" r="49"></circle>
                 <text class="ring-percent" id="trafficPercent" x="60" y="54" text-anchor="middle">—</text>
                 <text class="ring-label" x="60" y="68" text-anchor="middle" data-i18n="usage">میزان مصرف</text>
               </svg>
@@ -859,7 +859,13 @@
         if (percent === null) { ring.classList.add("unlimited"); }
         else if (percent >= 80) { ring.classList.add("danger"); }
         else if (percent >= 50) { ring.classList.add("warning"); }
-        ring.style.strokeDashoffset = String(RING_CIRCUMFERENCE * (1 - ringProgress));
+         if (percent === null) {
+           ring.style.removeProperty("stroke-dasharray");
+           ring.style.removeProperty("stroke-dashoffset");
+         } else {
+           ring.style.strokeDasharray = String(RING_CIRCUMFERENCE);
+           ring.style.strokeDashoffset = String(RING_CIRCUMFERENCE * (1 - ringProgress));
+         }
         ring.style.removeProperty("stroke");
         setText($("trafficPercent"), percent === null ? "∞" : number(percent, 1) + "%");
         setText($("progressNote"), percent !== null && Number(used * 10000n / state.totalByte) > 10000 ? translate("quotaExceeded") : "");
