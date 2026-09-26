@@ -8,7 +8,7 @@ A lightweight bilingual subscription page template for Sanaei / 3x-ui / X-UI pan
 - Dark and light themes
 - Responsive mobile and desktop layout
 - Static traffic and remaining-time cards
-- Clash and JSON copy buttons
+- Configuration copy buttons
 - Subscription QR code
 - Inline WebP logo with no local image dependency
 - Pure HTML, CSS and JavaScript
@@ -16,6 +16,7 @@ A lightweight bilingual subscription page template for Sanaei / 3x-ui / X-UI pan
 ## Quick Links
 
 - Project: https://github.com/miladfaryad11/sanaei-sub-template
+- Persian guide: [README_FA.md](README_FA.md)
 - Template: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html
 - Screenshot: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/preview.png
 
@@ -64,4 +65,14 @@ sudo curl -fsSL -o /etc/x-ui/sub/sub.html \
 sudo chmod 644 /etc/x-ui/sub/sub.html
 ```
 
-See [README_FA.md](README_FA.md) for the Persian installation guide.
+## Report a Bug or Request a Feature
+
+Please open an issue and include:
+
+- What happened or what you expected
+- Your panel version and browser
+- A screenshot or reproducible subscription URL when possible
+
+Open an issue: https://github.com/miladfaryad11/sanaei-sub-template/issues/new/choose
+
+For Persian instructions, see [README_FA.md](README_FA.md).
