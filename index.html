@@ -215,7 +215,7 @@
     .usage-ring-progress { stroke: var(--accent); stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; transition: none; }
     .usage-ring-progress.warning { stroke: var(--warning); }
     .usage-ring-progress.danger { stroke: var(--danger); }
-    .usage-ring-progress.unlimited { stroke: var(--cyan); stroke-dasharray: 10 7; }
+     .usage-ring-progress.unlimited { stroke: var(--cyan); }
     .ring-percent { fill: var(--text); font-size: 21px; font-weight: 800; }
     .ring-label { fill: var(--muted); font-size: 7.5px; }
     .progress-note { min-height: 17px; margin-top: 4px; color: var(--faint); font-size: 10px; text-align: center; }
@@ -232,7 +232,7 @@
     .detail-value.expired { color: var(--danger); }
 
     .quick-card { margin-top: 16px; padding: clamp(18px, 3vw, 25px); }
-    #quickActions .actions-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: none; }
+     #quickActions .actions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
     .quick-import-card { margin-top: 16px; overflow: hidden; padding: 0; background: linear-gradient(135deg, var(--surface), rgba(75, 215, 232, .08)); }
     .quick-import-toggle { padding: 20px clamp(18px, 3vw, 25px); }
     .quick-import-list { display: grid; gap: 14px; padding: 0 clamp(18px, 3vw, 25px) clamp(18px, 3vw, 25px); }
@@ -470,8 +470,6 @@
         <div><h2 class="section-title" id="quickHeading" data-i18n="quickActions">دسترسی سریع</h2><p class="section-caption" data-i18n="quickCaption">ابزارهای کاربردی اشتراک</p></div>
       </div>
        <div class="actions-grid">
-         <button class="action-button" type="button" data-action="copy-clash" data-i18n-aria="copyClash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="action-label" data-i18n="copyClash">کپی لینک کلش</span></button>
-         <button class="action-button" type="button" data-action="copy-json" data-i18n-aria="copyJson"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="action-label" data-i18n="copyJson">کپی لینک JSON</span></button>
          <button class="action-button" type="button" data-action="qr-sub" data-i18n-aria="subscriptionQr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v3M17 20h3"/></svg><span class="action-label" data-i18n="subscriptionQr">QR اشتراک</span></button>
          <button class="action-button" type="button" data-action="support" data-i18n-aria="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-16 0v5a2 2 0 0 0 2 2h2v-6H5"/><path d="M19 12h-3v6h2a2 2 0 0 0 2-2v-4M9 21h6"/></svg><span class="action-label" data-i18n="support">پشتیبانی</span></button>
        </div>
@@ -591,10 +589,10 @@
           activity: "انقضا و فعالیت", activityCaption: "وضعیت زمانی اشتراک", expiration: "تاریخ انقضا", neverExpires: "بدون تاریخ انقضا", lastOnline: "آخرین اتصال",
           never: "هنوز ثبت نشده", remainingTime: "زمان باقی‌مانده", expired: "منقضی شده", days: "روز", hours: "ساعت", minutes: "دقیقه", active: "فعال", inactive: "غیرفعال",
           online: "متصل", offline: "آفلاین",
-            quickActions: "دسترسی سریع", quickCaption: "ابزارهای کاربردی اشتراک", subscriptionQr: "QR اشتراک", copyClash: "کپی لینک کلش", copyJson: "کپی لینک JSON", support: "پشتیبانی",
+            quickActions: "دسترسی سریع", quickCaption: "ابزارهای کاربردی اشتراک", subscriptionQr: "QR اشتراک", support: "پشتیبانی",
           apps: "برنامه‌های محبوب", appsCaption: "برنامه‌های پیشنهادی برای اتصال", quickImport: "افزودن سریع با لینک اشتراک", quickImportCaption: "اتصال مستقیم در برنامه‌های منتخب", android: "اندروید", ios: "آیفون", windows: "ویندوز",
            configurations: "پیکربندی‌ها", configCaption: "اتصال‌های در دسترس", allConfigurations: "همه", configuration: "پیکربندی",
-            copy: "کپی", copyAll: "کپی همه", searchConfigs: "جست‌وجوی کانفیگ", noMatches: "کانفیگی پیدا نشد", qrCode: "کد QR", close: "بستن", clashCopied: "لینک کلش کپی شد", jsonCopied: "لینک JSON کپی شد", allCopied: "همه کانفیگ‌ها کپی شدند", configCopied: "پیکربندی کپی شد", copyFailed: "کپی انجام نشد", qrFailed: "ساخت QR ممکن نیست", qrFallback: "QR اشتراک جایگزین شد",
+             copy: "کپی", copyAll: "کپی همه", searchConfigs: "جست‌وجوی کانفیگ", noMatches: "کانفیگی پیدا نشد", qrCode: "کد QR", close: "بستن", allCopied: "همه کانفیگ‌ها کپی شدند", configCopied: "پیکربندی کپی شد", copyFailed: "کپی انجام نشد", qrFailed: "ساخت QR ممکن نیست", qrFallback: "QR اشتراک جایگزین شد",
           telegramProxy: "پروکسی تلگرام", quotaExceeded: "مصرف از سقف اشتراک عبور کرده است", noProtocol: "پروتکل ناشناخته",
           unitB: "بایت", unitKB: "کیلوبایت", unitMB: "مگابایت", unitGB: "گیگابایت", unitTB: "ترابایت", unitPB: "پتابایت"
         },
@@ -605,10 +603,10 @@
           activity: "Expiration and activity", activityCaption: "Subscription timeline", expiration: "Expiration", neverExpires: "Never expires", lastOnline: "Last online",
           never: "Never", remainingTime: "Remaining time", expired: "Expired", days: "d", hours: "h", minutes: "min", active: "Active", inactive: "Inactive",
           online: "Online", offline: "Offline",
-            quickActions: "Quick actions", quickCaption: "Useful subscription tools", subscriptionQr: "Subscription QR", copyClash: "Copy Clash URL", copyJson: "Copy JSON URL", support: "Support",
+            quickActions: "Quick actions", quickCaption: "Useful subscription tools", subscriptionQr: "Subscription QR", support: "Support",
           apps: "Popular apps", appsCaption: "Recommended connection apps", quickImport: "Quick import with subscription URL", quickImportCaption: "One-tap import in supported apps", android: "Android", ios: "iPhone", windows: "Windows",
            configurations: "Configurations", configCaption: "Available connections", allConfigurations: "All", configuration: "Configuration",
-            copy: "Copy", copyAll: "Copy all", searchConfigs: "Search configurations", noMatches: "No configuration found", qrCode: "QR code", close: "Close", clashCopied: "Clash URL copied", jsonCopied: "JSON URL copied", allCopied: "All configurations copied", configCopied: "Configuration copied", copyFailed: "Copy failed", qrFailed: "Unable to generate QR", qrFallback: "Subscription QR used instead",
+             copy: "Copy", copyAll: "Copy all", searchConfigs: "Search configurations", noMatches: "No configuration found", qrCode: "QR code", close: "Close", allCopied: "All configurations copied", configCopied: "Configuration copied", copyFailed: "Copy failed", qrFailed: "Unable to generate QR", qrFallback: "Subscription QR used instead",
           telegramProxy: "Telegram Proxy", quotaExceeded: "Usage is over the subscription limit", noProtocol: "Unknown protocol",
           unitB: "B", unitKB: "KB", unitMB: "MB", unitGB: "GB", unitTB: "TB", unitPB: "PB"
         }
@@ -1253,14 +1251,12 @@
       }
       function closeQr() { var modal = $("qrModal"); if (modal.hidden) { return; } modal.hidden = true; qrState.text = ""; if (lastModalFocus && lastModalFocus.focus) { lastModalFocus.focus(); } }
       function wireActions() {
-         var values = { "copy-clash": server.clashUrl, "copy-json": server.jsonUrl, "qr-sub": server.subUrl, support: server.supportUrl };
+         var values = { "qr-sub": server.subUrl, support: server.supportUrl };
         document.querySelectorAll("[data-action]").forEach(function (button) {
           var action = button.getAttribute("data-action");
           button.hidden = !values[action];
           button.addEventListener("click", function () {
-             if (action === "copy-clash") { copyValue(server.clashUrl, translate("clashCopied")); }
-             else if (action === "copy-json") { copyValue(server.jsonUrl, translate("jsonCopied")); }
-             else if (action === "qr-sub") { openQr(server.subUrl, "subscriptionQr"); }
+             if (action === "qr-sub") { openQr(server.subUrl, "subscriptionQr"); }
              else if (action === "support") { openExternal(server.supportUrl); }
           });
         });
