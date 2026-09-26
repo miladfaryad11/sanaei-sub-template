@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-DEFAULT_URL="https://github.com/proxystore11/sanaei-sub-template/archive/refs/heads/main.tar.gz"
+DEFAULT_URL="https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz"
 URL="${TEMPLATE_URL:-$DEFAULT_URL}"
 SOURCE_IS_ARCHIVE=1
 DEST_DIR="/etc/x-ui/sub"
