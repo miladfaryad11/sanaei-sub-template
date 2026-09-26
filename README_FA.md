@@ -5,6 +5,7 @@
 ## لینک‌های کوتاه
 
 - پروژه: https://github.com/miladfaryad11/sanaei-sub-template
+- راهنمای انگلیسی: [README.md](README.md)
 - قالب: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html
 - اسکرین‌شات: https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/preview.png
 
@@ -84,7 +85,7 @@ head -n 5 /etc/x-ui/sub/sub.html
 
 ### خطای دانلود از GitHub
 
-مخزن باید عمومی باشد و فایل باید دقیقاً با نام `sub.html` در آرشیو شاخه‌ی `main` وجود داشته باشد. آدرس آرشیو را با دستور زیر بررسی کنید:
+مخزن باید عمومی باشد و فایل باید دقیقاً با نام `sub.html` در شاخه‌ی `main` وجود داشته باشد. آدرس فایل را با دستور زیر بررسی کنید:
 
 ```bash
 curl -I "https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html"
@@ -103,3 +104,15 @@ curl -I "https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/mai
 ```
 
 برای بازگردانی، فایل backup را به `sub.html` تغییر نام دهید.
+
+## گزارش باگ و پیشنهاد قابلیت
+
+برای گزارش باگ یا پیشنهاد قابلیت جدید، یک Issue باز کنید و این موارد را بنویسید:
+
+- چه اتفاقی افتاد یا چه چیزی انتظار داشتید
+- نسخه پنل و مرورگر
+- در صورت امکان اسکرین‌شات یا لینک اشتراک قابل بازتولید
+
+لینک ثبت Issue:
+
+https://github.com/miladfaryad11/sanaei-sub-template/issues/new/choose
