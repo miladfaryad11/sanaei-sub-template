@@ -22,7 +22,7 @@ A lightweight bilingual subscription page template for Sanaei / 3x-ui / X-UI pan
 Download the installer from the repository archive and run it:
 
 ```bash
-curl -fsSL https://github.com/proxystore11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
+curl -fsSL https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
   | tar -xzOf - --wildcards '*/install.sh' > /tmp/x-ui-sub-install.sh
 sudo bash /tmp/x-ui-sub-install.sh
 ```
@@ -55,7 +55,7 @@ Then save the settings and reopen a subscription link.
 
 ```bash
 sudo mkdir -p /etc/x-ui/sub
-curl -fsSL https://github.com/proxystore11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
+curl -fsSL https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz \
   | tar -xzOf - --wildcards '*/sub.html' \
   | sudo tee /etc/x-ui/sub/sub.html >/dev/null
 sudo chmod 644 /etc/x-ui/sub/sub.html
