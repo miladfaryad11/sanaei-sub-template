@@ -81,21 +81,7 @@ ls -lh /etc/x-ui/sub/sub.html
 head -n 5 /etc/x-ui/sub/sub.html
 ```
 
-## خطاهای رایج
-
-### خطای دانلود از GitHub
-
-مخزن باید عمومی باشد و فایل باید دقیقاً با نام `sub.html` در شاخه‌ی `main` وجود داشته باشد. آدرس فایل را با دستور زیر بررسی کنید:
-
-```bash
-curl -I "https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html"
-```
-
-### خطای دسترسی
-
-نصب را با `sudo` اجرا کنید؛ چون نوشتن در `/etc/x-ui` به دسترسی root نیاز دارد.
-
-### بازگردانی نسخه قبلی
+## بازگردانی نسخه قبلی
 
 اسکریپت قبل از جایگزینی، backup را با نامی مانند زیر می‌سازد:
 
