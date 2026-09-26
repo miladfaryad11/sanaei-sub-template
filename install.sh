@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-DEFAULT_URL="https://github.com/miladfaryad11/sanaei-sub-template/archive/refs/heads/main.tar.gz"
+DEFAULT_URL="https://raw.githubusercontent.com/miladfaryad11/sanaei-sub-template/main/sub.html"
 URL="${TEMPLATE_URL:-$DEFAULT_URL}"
-SOURCE_IS_ARCHIVE=1
+SOURCE_IS_ARCHIVE=0
 DEST_DIR="/etc/x-ui/sub"
 ORIGINAL_ARGS=("$@")
 
