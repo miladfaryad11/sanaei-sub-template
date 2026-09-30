@@ -25,6 +25,16 @@ Instead of showing users a raw subscription response, the template presents thei
 - Live status refresh every 10 seconds
 - No local image dependency for the built-in logo
 
+## Screenshots
+
+### Persian Interface, Light Theme
+
+![Persian light theme preview](preview-fa-light.png)
+
+### English Interface, Dark Theme
+
+![English dark theme preview](preview-en-dark.png)
+
 ## User Guide
 
 ### Subscription Status
